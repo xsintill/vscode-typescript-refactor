@@ -1,8 +1,8 @@
 {
-  "name": "refactorix",
-  "description": "TypeScript refactoring tools for Visual Studio Code",
+  "name": "typescript-refactor",
+  "description": "TypeScript refactor tools for Visual Studio Code",
   "version": "0.3.2",
-  "publisher": "krizzdewizz",
+  "publisher": "xsintill",
   "engines": {
     "vscode": "^0.10.1"
   },
@@ -11,12 +11,12 @@
   ],
   "icon": "doc/logo.png",
   "bugs": {
-    "url": "https://github.com/krizzdewizz/vscode-refactorix/issues"
+    "url": "https://github.com/xsintill/vscode-typescript-refactor/issues"
   },
-  "homepage": "https://github.com/krizzdewizz/vscode-refactorix",
+  "homepage": "https://github.com/xsintill/vscode-typescript-refactor",
   "repository": {
     "type": "git",
-    "url": "https://github.com/krizzdewizz/vscode-refactorix.git"
+    "url": "https://github.com/xsintill/vscode-typescript-refactor.git"
   },
   "activationEvents": [
     "onLanguage:typescript"
@@ -25,80 +25,118 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.refactorix.ExtractVariable",
-        "title": "x: Extract variable"
+        "command": "extension.typescript.refactor.ExtractVariable",
+        "title": "llq: Extract variable"
       },
       {
-        "command": "extension.refactorix.ArrowFunction.ToggleSingleStatementBlockExpression",
-        "title": "x: Arrow function toggle single statement block <-> expression"
+        "command": "extension.typescript.refactor.ArrowFunction.ToggleSingleStatementBlockExpression",
+        "title": "llq: Arrow function toggle single statement block <-> expression"
       },
       {
-        "command": "extension.refactorix.ArrowFunction.SingleStatementBlockToExpressionAll",
-        "title": "x: Arrow function all single statement blocks to expression"
+        "command": "extension.typescript.refactor.ArrowFunction.SingleStatementBlockToExpressionAll",
+        "title": "llq: Arrow function all single statement blocks to expression"
       },
       {
-        "command": "extension.refactorix.Semicolons.Add",
-        "title": "x: Add semicolons"
+        "command": "extension.typescript.refactor.Semicolons.Add",
+        "title": "llq: Add semicolons"
       },
       {
-        "command": "extension.refactorix.Semicolons.Remove",
-        "title": "x: Remove semicolons"
+        "command": "extension.typescript.refactor.Semicolons.Remove",
+        "title": "llq: Remove semicolons"
       },
       {
-        "command": "extension.refactorix.Property.ToGetterSetter",
-        "title": "x: Property to getter/setter"
+        "command": "extension.typescript.refactor.Property.ToGetterSetter",
+        "title": "llq: Property to getter/setter"
       },
       {
-        "command": "extension.refactorix.String.Interpolate",
-        "title": "x: Interpolate string part"
+        "command": "extension.typescript.refactor.String.Interpolate",
+        "title": "llq: Interpolate string part"
       },
       {
-        "command": "extension.refactorix.Access.toggle",
-        "title": "x: Toggle access modifier"
+        "command": "extension.typescript.refactor.Access.toggle",
+        "title": "llq: Toggle access modifier"
       }
     ],
     "keybindings": [
       {
-        "command": "extension.refactorix.Semicolons.Add",
+        "command": "extension.typescript.refactor.Semicolons.Add",
         "key": "ctrl+;",
         "when": "editorTextFocus"
       },
       {
-        "command": "extension.refactorix.Semicolons.Remove",
+        "command": "extension.typescript.refactor.Semicolons.Remove",
         "key": "ctrl+shift+;",
         "when": "editorTextFocus"
       },
       {
-        "command": "extension.refactorix.ArrowFunction.ToggleSingleStatementBlockExpression",
+        "command": "extension.typescript.refactor.ArrowFunction.ToggleSingleStatementBlockExpression",
         "key": "ctrl+]",
         "when": "editorTextFocus"
       },
       {
-        "command": "extension.refactorix.ArrowFunction.SingleStatementBlockToExpressionAll",
+        "command": "extension.typescript.refactor.ArrowFunction.SingleStatementBlockToExpressionAll",
         "key": "ctrl+shift+]",
         "when": "editorTextFocus"
       },
       {
-        "command": "extension.refactorix.ExtractVariable",
+        "command": "extension.typescript.refactor.ExtractVariable",
         "key": "alt+shift+l",
         "when": "editorTextFocus"
       },
       {
-        "command": "extension.refactorix.String.Interpolate",
+        "command": "extension.typescript.refactor.String.Interpolate",
         "key": "shift+alt+x i",
         "when": "editorTextFocus"
       },
       {
-        "command": "extension.refactorix.Property.ToGetterSetter",
+        "command": "extension.typescript.refactor.Property.ToGetterSetter",
         "key": "shift+alt+x g",
         "when": "editorTextFocus"
       },
       {
         "key": "alt+shift+q",
-        "command": "extension.refactorix.Access.toggle",
+        "command": "extension.typescript.refactor.Access.toggle",
         "when": "editorTextFocus"
       }
-    ]
+    ],
+    "menus": {
+      "editor/context": [
+        {           
+        "command": "extension.typescript.refactor.ExtractVariable",
+        "title": "llq: Extract variable"
+      },
+      {
+        "command": "extension.typescript.refactor.ArrowFunction.ToggleSingleStatementBlockExpression",
+        "title": "llq: Arrow function toggle single statement block <-> expression"
+      },
+      {
+        "command": "extension.typescript.refactor.ArrowFunction.SingleStatementBlockToExpressionAll",
+        "title": "llq: Arrow function all single statement blocks to expression"
+      },
+      {
+        "command": "extension.typescript.refactor.Semicolons.Add",
+        "title": "llq: Add semicolons"
+      },
+      {
+        "command": "extension.typescript.refactor.Semicolons.Remove",
+        "title": "llq: Remove semicolons"
+      },
+      {
+        "command": "extension.typescript.refactor.Property.ToGetterSetter",
+        "title": "llq: Property to getter/setter"
+      },
+      {
+        "command": "extension.typescript.refactor.String.Interpolate",
+        "title": "llq: Interpolate string part"
+      },
+      {
+        "command": "extension.typescript.refactor.Access.toggle",
+        "title": "llq: Toggle access modifier"
+      }
+        
+      ]
+    }
+
   },
   "scripts": {
     "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
@@ -108,9 +146,9 @@
     "typescript": "*"
   },
   "devDependencies": {
+    "jasmine": "^2.5.3",
     "tslint": "*",
     "tslint-microsoft-contrib": "*",
-    "vscode": "0.10.x",
-    "jasmine": "*"
+    "vscode": "0.10.x"
   }
 }
