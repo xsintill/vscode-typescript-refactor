@@ -1,11 +1,11 @@
-# vscode-refactorix
-TypeScript refactoring tools for Visual Studio Code.
+# vscode-typescript-refactor
+TypeScript refactor tools for Visual Studio Code.
 
-After installing, pressing `F1` and entering `x:` you should see the Refactorix commands in the drop down:
+After installing, pressing `F1` and entering `x:` you should see the Typescript refactor commands in the drop down:
 
-![Commands](doc/commands.png "Refactorix commands")
+![Commands](doc/commands.png "Typescript refactor commands")
 
-## Refactorings
+## Refactor commands
 
 ### Toggle access modifier
 Toggles between `private`, `protected`, `public` and no access modifier.

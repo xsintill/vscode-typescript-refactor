@@ -12,13 +12,13 @@ import { interpolate } from './stringg';
 import { toggle } from './access';
 
 export function activate(context: vscode.ExtensionContext) {
-    context.subscriptions.push(vscode.commands.registerCommand('extension.refactorix.ExtractVariable', extractVariable));
-    context.subscriptions.push(vscode.commands.registerCommand('extension.refactorix.ArrowFunction.ToggleSingleStatementBlockExpression', toggleSingleStatementBlockExpression));
-    context.subscriptions.push(vscode.commands.registerCommand('extension.refactorix.ArrowFunction.SingleStatementBlockToExpressionAll', () => singleStatementBlockToExpression(true)));
-    context.subscriptions.push(vscode.commands.registerCommand('extension.refactorix.ArrowFunction.ExpressionToBlock', expressionToBlock));
-    context.subscriptions.push(vscode.commands.registerCommand('extension.refactorix.Semicolons.Add', () => semicolons(true)));
-    context.subscriptions.push(vscode.commands.registerCommand('extension.refactorix.Semicolons.Remove', () => semicolons(false)));
-    context.subscriptions.push(vscode.commands.registerCommand('extension.refactorix.Property.ToGetterSetter', toGetterSetter));
-    context.subscriptions.push(vscode.commands.registerCommand('extension.refactorix.String.Interpolate', interpolate));
-    context.subscriptions.push(vscode.commands.registerCommand('extension.refactorix.Access.toggle', toggle));
+    context.subscriptions.push(vscode.commands.registerCommand('extension.typescript.refactor.ExtractVariable', extractVariable));
+    context.subscriptions.push(vscode.commands.registerCommand('extension.typescript.refactor.ArrowFunction.ToggleSingleStatementBlockExpression', toggleSingleStatementBlockExpression));
+    context.subscriptions.push(vscode.commands.registerCommand('extension.typescript.refactor.ArrowFunction.SingleStatementBlockToExpressionAll', () => singleStatementBlockToExpression(true)));
+    context.subscriptions.push(vscode.commands.registerCommand('extension.typescript.refactor.ArrowFunction.ExpressionToBlock', expressionToBlock));
+    context.subscriptions.push(vscode.commands.registerCommand('extension.typescript.refactor.Semicolons.Add', () => semicolons(true)));
+    context.subscriptions.push(vscode.commands.registerCommand('extension.typescript.refactor.Semicolons.Remove', () => semicolons(false)));
+    context.subscriptions.push(vscode.commands.registerCommand('extension.typescript.refactor.Property.ToGetterSetter', toGetterSetter));
+    context.subscriptions.push(vscode.commands.registerCommand('extension.typescript.refactor.String.Interpolate', interpolate));
+    context.subscriptions.push(vscode.commands.registerCommand('extension.typescript.refactor.Access.toggle', toggle));
 }
