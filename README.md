@@ -17,7 +17,7 @@ When placed on a get or set accessor, the modifier of the other accessor is togg
 #### Settings
 Add this configuration block to the VS Code 'User' or 'Workspace' settings:
 ```
-"extension.refactorix.Access.toggle": {
+"extension.typescript.refactor.Access.toggle": {
     "preferPublic": true
 }
 ```
@@ -28,14 +28,14 @@ Add this configuration block to the VS Code 'User' or 'Workspace' settings:
 
 Surrounds the selected part of a string literal with `${}` and converts the literal to backticks as necessary.
 
-Before - assume you have `refactorix` selected:
+Before - assume you have `xsintill` selected:
 ```
-'my name is refactorix.'
+'my name is xsintill.'
 ```
 
 After - note the backticks:
 ```
-`my name is ${refactorix}.`
+`my name is ${xsintill}.`
 ```
 
 Select a part of a string literal and invoke the command. The selection may be empty in which case `${}` is inserted.
@@ -68,7 +68,7 @@ Place the cursor on a property and invoke the command.
 #### Settings
 Add this configuration block to the VS Code 'User' or 'Workspace' settings:
 ```
-"extension.refactorix.Property.ToGetterSetter": {
+"extension.typescript.refactor.Property.ToGetterSetter": {
     "singleLine": false,
      "prefix": "_"
 }

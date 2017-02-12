@@ -1,10 +1,10 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-    "xextension.refactorix.Property.ToGetterSetter": {
+    "extension.typescript.refactor.Property.ToGetterSetter": {
         "singleLine": false,
         "prefix": "qqq"
     },
-    "extension.refactorix.Access.toggle": {
+    "extension.typescript.refactor.Access.toggle": {
         "preferPublic": false
     }
 }

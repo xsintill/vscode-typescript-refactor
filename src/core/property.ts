@@ -44,9 +44,7 @@ export function toGetterSetter(sourceFile: ts.SourceFile, pos: number, indent: s
 
                 const typeNode = findType(node);
                 const type = typeNode ? (': ' + text.substring(typeNode.getStart(), typeNode.getEnd())) : '';
-                // children.forEach(it => console.log('aaaaaa=' + ts.SyntaxKind[it.kind]));
 
-                // const newLine = '';
                 const newLineIndentTab = newLine ? newLine + indent + tab : ' ';
                 const newLineIndent = newLine ? newLine + indent : ' ';
                 const nameNode = findChildOfKind(node, ts.SyntaxKind.Identifier);
